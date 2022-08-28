@@ -26,44 +26,16 @@ print()
 
 palindrome = input("Input your number: ")
 
-middle = int(len(palindrome) / 2)
-
 if len(palindrome) < 1:
     print("Error. No number")
 elif len(palindrome) == 1 and palindrome:
     print("Your's number is palindrome :)")
-elif len(palindrome) % 2:
-    palindrome_left = palindrome[:middle]
-    palindrome_left = int(palindrome_left)
-
-    palindrome_right = list(map(int, palindrome[middle + 1:]))
-    palindrome_right.reverse()
-    palindrome_right = [str(digit) for digit in palindrome_right]
-    palindrome_right = "".join(palindrome_right)
-    palindrome_right = int(palindrome_right)
-
-    if palindrome_left == palindrome_right:
-        print("Number", palindrome, "is palindrome :)")
-    else:
-        print("Number", palindrome, "isn't palindrome :(")
-elif not len(palindrome) % 2:
-    palindrome_left = palindrome[:middle]
-    palindrome_left = int(palindrome_left)
-
-    palindrome_right = list(map(int, palindrome[middle:]))
-    palindrome_right.reverse()
-    palindrome_right = [str(digit) for digit in palindrome_right]
-    palindrome_right = "".join(palindrome_right)
-    palindrome_right = int(palindrome_right)
-
-    if palindrome_left == palindrome_right:
-        print("Number", palindrome, "is palindrome :)")
-    else:
-        print("Number", palindrome, "isn't palindrome :(")
-
-
-# 3) Есть круг с центром в начале координат и радиусом 4. Пользователь вводит с клавиатуры координаты точки x и y. Написать программу,
-# которая определит, лежит ли эта точка внутри круга или нет.
+elif palindrome == palindrome[::-1]:
+    print("Your", palindrome, "is palindrome")
+else:
+    print("Your", palindrome, "isn't palindrome")
+    # 3) Есть круг с центром в начале координат и радиусом 4. Пользователь вводит с клавиатуры координаты точки x и y. Написать программу,
+    # которая определит, лежит ли эта точка внутри круга или нет.
 
 print()
 
