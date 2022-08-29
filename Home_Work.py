@@ -2,9 +2,6 @@
 # при четном количестве цифр в числе, сумма цифр его левой половины равна сумме цифр его правой половины. Например, рассмотрим число
 # 1322. Его левая половина равна 13, а правая 22, и оно является счастливым билетом(т. к. 1 + 3=2 + 2).
 
-from unicodedata import digit
-
-
 lucky_ticket = input("Input your's ticket number: ")
 
 middle = int(len(lucky_ticket) / 2)
@@ -26,16 +23,15 @@ print()
 
 palindrome = input("Input your number: ")
 
-if len(palindrome) < 1:
+if not palindrome:
     print("Error. No number")
-elif len(palindrome) == 1 and palindrome:
-    print("Your's number is palindrome :)")
 elif palindrome == palindrome[::-1]:
     print("Your", palindrome, "is palindrome")
 else:
     print("Your", palindrome, "isn't palindrome")
-    # 3) Есть круг с центром в начале координат и радиусом 4. Пользователь вводит с клавиатуры координаты точки x и y. Написать программу,
-    # которая определит, лежит ли эта точка внутри круга или нет.
+
+# 3) Есть круг с центром в начале координат и радиусом 4. Пользователь вводит с клавиатуры координаты точки x и y. Написать программу,
+# которая определит, лежит ли эта точка внутри круга или нет.
 
 print()
 
